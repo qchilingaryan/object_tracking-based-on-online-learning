@@ -26,7 +26,7 @@ def main():
             images.append(img)
 
     # Initialize the KCF tracker
-    tracker = cv2.TrackerBoosting_create()
+    tracker = cv2.TrackerKCF_create()
 
     # Train the tracker on the first image and bounding box
     tracker.init(images[0], bboxes[0])
